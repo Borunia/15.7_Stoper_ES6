@@ -97,9 +97,11 @@ class Stopwatch extends React.Component {
         return (
           <div className="timer">
             <nav className="controls">
-              <a href="#body" className="button" onClick={this.start}>Start</a>
-              <a href="#" className="button" id="stop" onClick={this.stop}>Pause</a>
-              <a href="#" className="button" id="reset" onClick={this.reset}>Reset</a>
+              <a href="#" className="button" onClick={this.start}>Start</a>
+              <a href="#" className="button"  onClick={this.stop}>Pause</a>
+              <a href="#" className="button"  onClick={this.reset}>Reset</a>
+              <a href="#"  className='button' onClick={this.saveResult}>Save results</a>
+              <a href="#"  className='button' onClick={this.deleteResult}>Delete result</a>
             </nav>
             <div className="stopwatch">
             {this.format(this.getMinutes(), this.getSeconds(), this.getMiliseconds())}
@@ -113,6 +115,5 @@ class Stopwatch extends React.Component {
 
 ReactDOM.render(
     <Stopwatch />,
-    document.getElementById('App')
+    document.getElementById('app')
   );
-
